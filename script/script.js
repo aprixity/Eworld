@@ -1,4 +1,14 @@
 window.onload = function () {
+  // 헤더 tab
+  const htabBtn = document.querySelectorAll('.h-tab-btn > ul > li > a');
+
+  htabBtn.forEach((hbtn) => {
+    hbtn.addEventListener('click', function () {
+      htabBtn.forEach((hbtn) => hbtn.classList.remove('h-active'));
+      hbtn.classList.add('h-active');
+    });
+  });
+
   // 메뉴
   let navList = document.querySelector('.nav > ul');
   let subMenus = document.querySelectorAll('.nav > ul > li > ul');
@@ -43,4 +53,21 @@ window.onload = function () {
       }, 700);
     }
   }, 3000);
+
+  // 어트랙션 tab
+  const atabBtn = document.querySelectorAll('.a-tab-btn > ul > li > a');
+  const atabCont = document.querySelectorAll('.a-tab-cont > div');
+
+  atabCont.forEach((el) => (el.style.display = 'none'));
+  atabCont[0].style.display = 'block';
+
+  atabBtn.forEach((abtn, index) => {
+    abtn.addEventListener('click', function () {
+      atabBtn.forEach((abtn) => abtn.classList.remove('a-active'));
+      abtn.classList.add('a-active');
+
+      atabCont.forEach((cont) => (cont.style.display = 'none'));
+      atabCont[index].style.display = 'block';
+    });
+  });
 };
