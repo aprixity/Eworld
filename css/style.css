@@ -181,7 +181,8 @@
 /* attraction */
 #attraction-wrap {
   width: 100%;
-  background-image: url(../assert/discount.svg);
+
+  background-image: url(../assert/news.svg);
 }
 #attraction {
   width: 1600px;
@@ -269,7 +270,6 @@
   padding-top: 80px;
   padding-bottom: 80px;
   position: relative;
-  border-bottom: 1px solid #e9e9e9;
 }
 #event h1 {
   font-size: 30px;
@@ -341,13 +341,14 @@
 /* discount */
 #discount-wrap {
   width: 100%;
+  background-image: url(../assert/discount.svg);
 }
 #discount {
   width: 1400px;
   height: auto;
   margin: 0 auto;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 150px;
   position: relative;
 }
 #discount h1 {
@@ -403,6 +404,32 @@
   left: 50%;
   transform: translateX(-50%);
   margin-top: 15px;
+}
+
+/* map */
+#map {
+  width: 1400px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+#map h1 {
+  font-size: 30px;
+  text-align: center;
+}
+#map span {
+  font-weight: bold;
+}
+#map p {
+  text-align: center;
+  padding-top: 10px;
+  color: #868686;
+}
+#map img {
+  width: 100%;
+  padding-top: 50px;
 }
 
 /* footer */
