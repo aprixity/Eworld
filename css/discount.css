@@ -1,0 +1,39 @@
+#main {
+  width: 1600px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+#main .text {
+  text-align: center;
+}
+#main .text h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+#main .text p {
+  text-align: center;
+  padding-top: 10px;
+  color: #868686;
+}
+
+/* tab */
+.d-tab-menu .d-tab-btn {
+  padding-top: 50px;
+}
+.d-tab-menu .d-tab-btn ul {
+  display: flex;
+  justify-content: center;
+}
+.d-tab-menu .d-tab-btn ul li {
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  padding: 20px 300px;
+  font-size: 18px;
+}
+.d-tab-menu .d-tab-btn ul li.d-active {
+  background-color: #ffaf1d;
+  border: 0px;
+  font-weight: bold;
+  color: #fff;
+}
