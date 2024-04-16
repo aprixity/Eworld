@@ -35,11 +35,18 @@ window.onload = function () {
 
   // d-tab
   const dtabBtn = document.querySelectorAll('.d-tab-btn > ul > li');
+  const dtabCont = document.querySelectorAll('.d-tab-cont > div');
 
-  dtabBtn.forEach((dbtn) => {
+  dtabCont.forEach((el) => (el.style.display = 'none'));
+  dtabCont[0].style.display = 'block';
+
+  dtabBtn.forEach((dbtn, index) => {
     dbtn.addEventListener('click', function () {
       dtabBtn.forEach((dbtn) => dbtn.classList.remove('d-active'));
       dbtn.classList.add('d-active');
+
+      dtabCont.forEach((cont) => (cont.style.display = 'none'));
+      dtabCont[index].style.display = 'block';
     });
   });
 };
