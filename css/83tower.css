@@ -1,0 +1,122 @@
+#main > h1 {
+  padding-top: 80px;
+  font-size: 30px;
+  text-align: center;
+}
+#main > h1 > span {
+  font-weight: bold;
+}
+#main > p {
+  text-align: center;
+  padding-top: 10px;
+  color: #868686;
+}
+
+.rolling-wrap {
+  display: flex;
+  overflow: hidden;
+}
+.rolling-wrap .rolling-list ul {
+  display: flex;
+  padding-top: 50px;
+}
+.rolling-wrap .rolling-list ul li {
+  width: 600px;
+  height: 300px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.rolling-wrap .rolling-list ul li .image-wrap {
+  padding-right: 32px;
+  width: 600px;
+  height: 300px;
+  flex-shrink: 0;
+}
+.rolling-wrap .rolling-list ul li .image-wrap img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+}
+.rolling-wrap .rolling-list ul li .desc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 600px;
+}
+.rolling-wrap .rolling-list ul li .desc span {
+  color: #fff;
+  text-shadow: 2px 2px 3px #333;
+  font-size: 20px;
+}
+.rolling-wrap .rolling-list ul li .desc h1 {
+  font-size: 25px;
+  text-shadow: 2px 2px 3px #333;
+  font-weight: bold;
+  color: #fff;
+}
+.rolling-list.original {
+  animation: rollingleft1 100s linear infinite;
+}
+.rolling-list.clone {
+  animation: rollingleft2 100s linear infinite;
+}
+
+@keyframes rollingleft1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.01% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rollingleft2 {
+  0% {
+    transition: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+#side {
+  width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+#side ul {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+#side .img {
+  text-align: center;
+}
+#side .text {
+  text-align: center;
+}
+#side .text h1 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+#side .text span {
+  font-size: 15px;
+}
+#side ul li a:hover {
+  h1 {
+    color: #ffaf1d;
+  }
+}
